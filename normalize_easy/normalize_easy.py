@@ -6,8 +6,6 @@ rambh002@umn.edu
 """
 from numpy import asarray
 from sklearn.preprocessing import normalize
-#A=array([[1, 1, 0], [0, 1, 1], [1, 0, 1]])
-#asarray(A,dtype=float)
 
 # function called normc
 def normc(Mat):

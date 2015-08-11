@@ -1,0 +1,8 @@
+setup.py
+normalize_easy/__init__.py
+normalize_easy/normalize_easy.py
+normalize_easy.egg-info/PKG-INFO
+normalize_easy.egg-info/SOURCES.txt
+normalize_easy.egg-info/dependency_links.txt
+normalize_easy.egg-info/requires.txt
+normalize_easy.egg-info/top_level.txt
