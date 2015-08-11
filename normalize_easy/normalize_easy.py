@@ -10,8 +10,7 @@ from sklearn.preprocessing import normalize
 
 # function called normc
 def normc(Mat):
-   """Normalize the columns of the matrix
-   B= normc(A) 
+   """Normalize the columns of the matrix 
 
     >>> A = rand(4, 4)
     >>> B = normc(A)
@@ -32,7 +31,6 @@ def normc(Mat):
    # function called normr
 def normr(Mat):
    """Normalize the columns of the matrix
-   B= normr(A) 
     
     >>> A = rand(4, 4)
     >>> B = normr(A)
