@@ -16,7 +16,7 @@ def normc(Mat):
    the dtype of A is float"""
    
    # if statement to enforce dtype float
-   B = normalize(array(Mat),norm='l2',axis=0)
+   B = normalize(Mat,norm='l2',axis=0)
    
    return B
    
@@ -27,7 +27,7 @@ def normr(Mat):
    the dtype of A is float"""
    
    # if statement to enforce dtype float
-   B = normalize(array(Mat),norm='l2',axis=1)
+   B = normalize(Mat,norm='l2',axis=1)
    
    return B
    
