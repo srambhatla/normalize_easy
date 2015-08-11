@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name = "normalize_easy",
-    version = "0.0.1",
+    version = "0.0.2",
     author = "Sirisha Rambhatla",
     author_email = "rambh002@umn.edu",
     description = ("This package implements normc() and normr() functions to \

@@ -21,3 +21,6 @@ some_root_dir/
     b. `python setup.py bdist_wheel --universal`
     c. `python setup.py install`
 5. Then check via ipython  by importing the package
+6. If first version go to pipy and add a new package using PKG-INFO file look around in the directories. 
+7. twine upload dist/* If first version else put the apt who file name after /
+    a. aka `twine upload dist/<package-name><version number>*`

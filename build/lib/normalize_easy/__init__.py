@@ -1,1 +1,1 @@
-from .normalize_easy import normr, normc
+from .normalize_easy import normr, normc, normv
