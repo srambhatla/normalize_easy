@@ -10,14 +10,13 @@ def read(fname):
 
 setup(
     name = "normalize_easy",
-    version = "0.0.2",
+    version = "0.0.3",
     author = "Sirisha Rambhatla",
     author_email = "rambh002@umn.edu",
-    description = ("This package implements normc() and normr() functions to \
-    easily normalize columns and rows respectively."),
+    description = ("This package implements normc(), normr() and normv() functions to\
+    easily normalize columns and rows of a matrix, and vectors respectively."),
     license = "BSD",
-    keywords = "normr normc normalize rows columns math matrix linear algebra \
-    MATLAB",
+    keywords = "normr normc normv normalize rows columns math matrix linear algebra MATLAB",
     url = "https://github.com/srambhatla/normalize_easy",
     packages = ['normalize_easy'],
     long_description = read('README.md'),

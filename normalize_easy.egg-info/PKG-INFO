@@ -1,15 +1,15 @@
 Metadata-Version: 1.1
 Name: normalize-easy
-Version: 0.0.2
-Summary: This package implements normc() and normr() functions to     easily normalize columns and rows respectively.
+Version: 0.0.3
+Summary: This package implements normc(), normr() and normv() functions to    easily normalize columns and rows of a matrix, and vectors respectively.
 Home-page: https://github.com/srambhatla/normalize_easy
 Author: Sirisha Rambhatla
 Author-email: rambh002@umn.edu
 License: BSD
-Description: ## normalize_easy Package
+Description: ## normalize_easy Package 
         
         This package implements `normc()`, `normr()`, `normv()` functions to easily normalize columns, rows of 2-D arrays and vectors respectively. 
-        This package uses `sklearn.preprocessing.normalize` and forced the input array to have dtype as float. The input array has to be 2-D for `normc()` and `normr()`. 
+        This package uses `sklearn.preprocessing.normalize` and forces the input array to have dtype as float. The input array has to be 2-D for `normc()` and `normr()`. 
         
         
         * `normc()` -> normalizes columns of a 2-D array
@@ -21,11 +21,19 @@ Description: ## normalize_easy Package
         * `pip install normalize_easy`, or
         * Download the repo and run `python setup.py install`
         
+        ### To update
+        * `pip install normalize_easy —-upgrade`
+        
+        ### Version 0.0.3
+        * Cleaner code
+        * pep8 compliant
         
         
         
         
-Keywords: normr normc normalize rows columns math matrix linear algebra     MATLAB
+        
+        
+Keywords: normr normc normv normalize rows columns math matrix linear algebra MATLAB
 Platform: UNKNOWN
 Classifier: Development Status :: 3 - Alpha
 Classifier: Topic :: Utilities

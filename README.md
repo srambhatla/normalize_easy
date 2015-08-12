@@ -1,4 +1,4 @@
-## normalize_easy Package
+## normalize_easy Package 
 
 This package implements `normc()`, `normr()`, `normv()` functions to easily normalize columns, rows of 2-D arrays and vectors respectively. 
 This package uses `sklearn.preprocessing.normalize` and forces the input array to have dtype as float. The input array has to be 2-D for `normc()` and `normr()`. 
@@ -12,6 +12,14 @@ This package uses `sklearn.preprocessing.normalize` and forces the input array t
 ### To install
 * `pip install normalize_easy`, or
 * Download the repo and run `python setup.py install`
+
+### To update
+* `pip install normalize_easy —-upgrade`
+
+### Version 0.0.3
+* Cleaner code
+* pep8 compliant
+
 
 
 
