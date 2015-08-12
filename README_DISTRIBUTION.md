@@ -1,7 +1,7 @@
 
 ### Steps
-1. Create a `setup.py` file (find examples online)
-2. Create a `__init__.py` file `from .normalize_easy import normr, normc`
+1. Create/edit a `setup.py` file (find examples online)
+2. Create/edit a `__init__.py` file `from .normalize_easy import normr, normc`
 3. Update the README file
 4.  Follow the structure :
 
