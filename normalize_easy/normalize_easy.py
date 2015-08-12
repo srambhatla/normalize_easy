@@ -1,75 +1,65 @@
 # -*- coding: utf-8 -*-
-"""
-August 11, 2015
-Sirisha Rambhatla
-rambh002@umn.edu
-"""
-from numpy import asarray
-from pylab import rand, norm, allclose
+import numpy as np
+from numpy.linalg import norm
+from numpy.random import rand
 from sklearn.preprocessing import normalize
 
-# function called normc
+__author__ = {'Sirisha Rambhatla': 'rambh002@umn.edu'}
+
+
 def normc(Mat):
-   """Normalize the columns of the matrix 
+    """Normalize the columns of the matrix so the L2 norm of each column is 1.
 
     >>> A = rand(4, 4)
     >>> B = normc(A)
-    >>> allclose(norm(B[:, 0]), 1)
-    True"""
-   
-   # Assert 2-D Array
-   assert len(Mat.shape)==2 , 'The input array should be a 2-D array'
-   
-   # Enforce dtype float
-   if Mat.dtype != 'float': Mat = asarray(Mat,dtype=float)
-   
-   # Normalize 
-   B = normalize(Mat,norm='l2',axis=0)
-   
-   return B
-   
-   # function called normr
+    >>> np.allclose(norm(B[:, 0]), 1)
+    True
+    """
+    Mat = clean_and_check(Mat)
+
+    B = normalize(Mat, norm='l2', axis=0)
+    return B
+
+
 def normr(Mat):
-   """Normalize the columns of the matrix
-    
+    """Normalize the rows of the matrix so the L2 norm of each row is 1.
+
     >>> A = rand(4, 4)
     >>> B = normr(A)
-    >>> allclose(norm(B[0, :]), 1)
+    >>> np.allclose(norm(B[0, :]), 1)
     True
     """
-   
-   # Assert 2-D Array
-   assert len(Mat.shape)==2 , 'The input array should be a 2-D array'
-   
-     # Enforce dtype float
-   if Mat.dtype != 'float': Mat = asarray(Mat,dtype=float)
-       
-   # if statement to enforce dtype float
-   B = normalize(Mat,norm='l2',axis=1)
-   
-   return B
-   
+    Mat = clean_and_check(Mat, nshape=2)
+
+    B = normalize(Mat, norm='l2', axis=1)
+    return B
+
+
 def normv(Vec):
-    """Normalizes vectors
-    
+    """Normalizes vectors so their L2 norm is 1.
+
     >>> x = rand(5)
     >>> y = normv(x)
-    >>> allclose(norm(y), 1)
+    >>> np.allclose(norm(y), 1)
     True
     """
-    
-    # Assert 2-D Array
-    assert len(Vec.shape)==1 , 'The input array should be a 1-D array'
-   
-    # Enforce dtype float
-    if Vec.dtype != 'float': Vec = asarray(Vec,dtype=float)
-      
-    # if statement to enforce dtype float
-    B = normalize(Vec,norm='l2')
-   
+    Vec = clean_and_check(Vec, nshape=1)
+
+    B = normalize(Vec, norm='l2')
     return B
-     
-# For doctests   
+
+
+def clean_and_check(x, nshape=2):
+    """Make sure x is ready for computation; make it a dtype float and ensure it
+    has the right shape
+    """
+    assert len(x.shape) == nshape, 'This input array must be a {X}-D \
+    array'.format(X=nshape)
+
+    if x.dtype != np.float:
+        x = asarray(x, dtype=float)
+    return x
+
 if __name__ == "__main__":
     import doctest
-    doctest.testmod(verbose=True)
+    doctest.testmod(verbose=False)
